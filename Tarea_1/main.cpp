@@ -16,6 +16,7 @@ void createSuspense();
 
 int main() {
     createPC("Laptop");
+    
 }
 
 // Creacion de computadora
