@@ -2,21 +2,18 @@
 //  Copyright © 2016 Javier Curiel. All rights reserved.
 //
 
-#indef __Desktop__
+#ifndef __Desktop__
 #define __Desktop__
 
 #include <iostream>
+#include "Computer.hpp"
 
 class Desktop: public Computer{
 private:
   Desktop(){}
 
 public:
-  Desktop * create(){
-    configure();
-    assemble()
-    installSoftware();
-    pack();
+  static Desktop * create(){
     return new Desktop();
   }
 
@@ -36,4 +33,6 @@ public:
     std::cout << "Packing computer..." << std::endl;
   }
 
-}
+};
+
+#endif

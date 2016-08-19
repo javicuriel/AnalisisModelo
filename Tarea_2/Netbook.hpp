@@ -2,21 +2,18 @@
 //  Copyright © 2016 Javier Curiel. All rights reserved.
 //
 
-#indef __Netbook__
+#ifndef __Netbook__
 #define __Netbook__
 
 #include <iostream>
+#include "Computer.hpp"
 
 class Netbook: public Computer{
 private:
   Netbook(){}
 
 public:
-  Netbook * create(){
-    configure();
-    assemble()
-    installSoftware();
-    pack();
+  static Netbook * create(){
     return new Netbook();
   }
 
@@ -36,4 +33,6 @@ public:
     std::cout << "Packing computer..." << std::endl;
   }
 
-}
+};
+
+#endif

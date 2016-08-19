@@ -1,5 +1,5 @@
 
-#indef __Computer__
+#ifndef __Computer__
 #define __Computer__
 
 #include <iostream>
@@ -10,4 +10,7 @@ public:
   virtual void assemble() = 0;
   virtual void installSoftware() = 0;
   virtual void pack() = 0;
-}
+};
+
+
+#endif

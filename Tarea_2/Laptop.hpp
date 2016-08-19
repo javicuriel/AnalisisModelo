@@ -2,21 +2,18 @@
 //  Copyright © 2016 Javier Curiel. All rights reserved.
 //
 
-#indef __Laptop__
+#ifndef __Laptop__
 #define __Laptop__
 
 #include <iostream>
+#include "Computer.hpp"
 
 class Laptop: public Computer{
 private:
   Laptop(){}
 
 public:
-  Laptop * create(){
-    configure();
-    assemble()
-    installSoftware();
-    pack();
+  static Laptop * create(){
     return new Laptop();
   }
 
@@ -36,4 +33,6 @@ public:
     std::cout << "Packing computer..." << std::endl;
   }
 
-}
+};
+
+#endif

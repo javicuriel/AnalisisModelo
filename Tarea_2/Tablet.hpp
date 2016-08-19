@@ -2,21 +2,18 @@
 //  Copyright © 2016 Javier Curiel. All rights reserved.
 //
 
-#indef __Tablet__
+#ifndef __Tablet__
 #define __Tablet__
 
 #include <iostream>
+#include "Computer.hpp"
 
 class Tablet: public Computer{
 private:
   Tablet(){}
 
 public:
-  Tablet * create(){
-    configure();
-    assemble()
-    installSoftware();
-    pack();
+  static Tablet * create(){
     return new Tablet();
   }
 
@@ -36,4 +33,6 @@ public:
     std::cout << "Packing computer..." << std::endl;
   }
 
-}
+};
+
+#endif
