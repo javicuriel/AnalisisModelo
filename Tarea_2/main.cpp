@@ -10,5 +10,8 @@
 int main(){
   Creator * user = ConcreteCreator::getInstance();
   Computer * cpu = user->createComputer("Desktop");
+  Computer * cpu2 = user->createComputer("Laptop");
+  Computer * test = cpu->clonar();
+  test = cpu2->clonar();
   return 0;
 }

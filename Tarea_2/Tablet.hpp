@@ -8,7 +8,7 @@
 #include <iostream>
 #include "Computer.hpp"
 
-class Tablet: public Computer{
+class Tablet: public Clon<Computer,Desktop>{
 private:
   Tablet(){}
 
