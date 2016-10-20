@@ -106,6 +106,6 @@ int main()
 
     cout << c.execute<int, signature>(arrI, 5, sum)<< endl; //aplicar la función a un arreglo de ints, pero guardando la definición de la función en un typedef
 
-
+    
 
 }
