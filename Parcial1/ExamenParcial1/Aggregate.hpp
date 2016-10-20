@@ -26,11 +26,10 @@ public:
     delete [] list;
     list = temp;
     list[size-1] = element;
-
   }
 
   T  getElementAtPos(int index){
-    return list[index];
+    return lista[index];
   }
 
   int getSize(){

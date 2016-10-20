@@ -2,16 +2,16 @@
 #ifndef __Iterator__
 #define __Iterator__
 
-#include "Aggregate.hpp"
+#include "Inventario.hpp"
 
 template<class T>
 class Iterator{
 private:
   Iterator(){}
-  Aggregate<T> * list;
+  Inventario<T> * list;
   int i = 0;
 public:
-  Iterator(Aggregate<T> * list){
+  Iterator(Inventario<T> * list){
     this->list = list;
   }
 

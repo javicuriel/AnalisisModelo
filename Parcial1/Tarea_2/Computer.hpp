@@ -3,7 +3,7 @@
 #define __Computer__
 
 #include <iostream>
-#include "clon.hpp"
+#include "Clon.hpp"
 
 class Computer {
 public:
