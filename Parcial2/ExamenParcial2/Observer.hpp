@@ -6,7 +6,7 @@
 
 class Observer{
 public:
-  virtual void update(NoticiaReal noticia) = 0;
+  virtual void update(NoticiaReal noticia,std::string name) = 0;
 };
 
 #endif

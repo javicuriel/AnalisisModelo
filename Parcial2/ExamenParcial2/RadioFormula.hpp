@@ -11,6 +11,9 @@ class RadioFormula: public Noticiero, public Observer{
   NoticiaReal nh;
   NoticiaReal nt;
 public:
+  RadioFormula(){
+    name = "Radio Formula";
+  }
   void escribePena(NoticiaReal noticia){
     npn=noticia;
     notifyObservers(noticia);
@@ -23,11 +26,13 @@ public:
     nt=noticia;
     notifyObservers(noticia);
   }
-  void update(NoticiaReal noticia){
-    if (noticia.display()=="Hilary")
+  void update(NoticiaReal noticia,std::string name){
+    if (noticia.display().find("Hilary") != std::string::npos)
       escribeHilary(noticia);
-    else if (noticia.display()=="Trump")
+    else if (noticia.display().find("Trump") != std::string::npos)
       escribeTrump(noticia);
+    else if (noticia.display().find("Peña Nieto") != std::string::npos)
+      escribePena(noticia);
   }
 };
 

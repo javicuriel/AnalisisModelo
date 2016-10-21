@@ -5,15 +5,15 @@
 #include "Noticia.hpp"
 #include "NoticiaReal.hpp"
 
-class NoticiaPenaNieto:public Noticia{
-    NoticiaReal  notaReal;
+class NoticiaPenaNieto:public NoticiaReal{
+    NoticiaReal notaReal;
     std::string nota;
 public:
     NoticiaPenaNieto(){
       nota = "";
     }
     NoticiaPenaNieto& operator=(const std::string& value){
-      if(value=="Peña Nieto"){
+      if(value.find("Peña Nieto") != std::string::npos){
         notaReal = value;
         nota = value;
       }

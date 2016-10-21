@@ -8,6 +8,7 @@
 class Noticiero{
   std::vector<Observer*> observers;
 public:
+  std::string name = "";
   void registerObserver(Observer * o){
     observers.push_back(o);
   }
@@ -16,7 +17,7 @@ public:
   }
   void notifyObservers(NoticiaReal data){
     for(Observer * o:observers)
-      o->update(data);
+      o->update(data,name);
   }
 };
 

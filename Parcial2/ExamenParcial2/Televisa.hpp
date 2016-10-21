@@ -6,11 +6,14 @@
 #include "NoticiaReal.hpp"
 
 
-class Televisa: public Noticiero{
+class Televisa: public Noticiero, public Observer{
   NoticiaReal npn;
   NoticiaReal nh;
   NoticiaReal nt;
 public:
+  Televisa(){
+    name = "Televisa";
+  }
   void escribePena(NoticiaReal noticia){
     npn=noticia;
     notifyObservers(noticia);
@@ -22,6 +25,14 @@ public:
   void escribeTrump(NoticiaReal noticia){
     nt=noticia;
     notifyObservers(noticia);
+  }
+  void update(NoticiaReal noticia,std::string name){
+    if (noticia.display().find("Hilary") != std::string::npos)
+      escribeHilary(noticia);
+    else if (noticia.display().find("Trump") != std::string::npos)
+      escribeTrump(noticia);
+    else if (noticia.display().find("Peña Nieto") != std::string::npos)
+      escribePena(noticia);
   }
 
 };

@@ -15,10 +15,18 @@ public:
       return *this;
     }
     std::string display(){
-      std::cout << nota;
       return nota;
+    }
+    bool operator==(const std::string& x){
+      return this->nota == x;
+    }
+    friend std::ostream& operator<<(std::ostream& os, const NoticiaReal& noticia){
+        os << noticia.nota;
+        return os;
     }
 
 };
+
+
 
 #endif

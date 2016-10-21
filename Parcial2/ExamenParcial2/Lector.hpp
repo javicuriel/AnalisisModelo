@@ -5,14 +5,16 @@
 #include "Observer.hpp"
 
 class Lector:public Observer{
-  std::string noticia;
+  NoticiaReal noticia;
+  std::string noticiero;
 public:
-  void update(std::string noticia){
+  void update(NoticiaReal noticia,std::string name){
     this->noticia = noticia;
+    noticiero = name;
     displayData();
   }
   void displayData(){
-    std::cout << noticia  << std::endl;
+    std::cout << noticiero << ": " << noticia  << std::endl;
   }
 
 };

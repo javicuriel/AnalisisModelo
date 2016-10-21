@@ -9,6 +9,9 @@ class CNNNoticias: public Noticiero, public Observer{
   NoticiaReal nh;
   NoticiaReal nt;
 public:
+  CNNNoticias(){
+    name = "CNN News";
+  }
   void escribeHilary(NoticiaReal noticia){
     nh=noticia;
     notifyObservers(noticia);
@@ -17,10 +20,10 @@ public:
     nt=noticia;
     notifyObservers(noticia);
   }
-  void update(NoticiaReal noticia){
-    if (noticia.display()=="Hilary")
+  void update(NoticiaReal noticia,std::string name){
+    if (noticia.display().find("Hilary") != std::string::npos)
       escribeHilary(noticia);
-    else if (noticia.display()=="Trump")
+    else if (noticia.display().find("Trump") != std::string::npos)
       escribeTrump(noticia);
   }
 

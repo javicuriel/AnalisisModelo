@@ -5,7 +5,7 @@
 #include "Noticia.hpp"
 #include "NoticiaReal.hpp"
 
-class NoticiaHilary:public Noticia{
+class NoticiaHilary:public NoticiaReal{
     NoticiaReal  notaReal;
     std::string nota;
 public:
