@@ -14,13 +14,11 @@
 int main(){
   Fabrica * distritoFederal = DistritoFederal::getInstance();
   Fabrica * aguascalientes = Aguascalientes::getInstance();
-  Pastel  tres = aguascalientes->createPastel("Tres Leches");
-  Pastel  sacher = distritoFederal->createPastel("Sacher");
-  Pastel  impos = distritoFederal->createPastel("Imposible");
-  // Pastel * test = impos->clonar();
-  Aggregate<Pastel> lista;
+  Pastel * tres = aguascalientes->createPastel("Tres Leches");
+  Pastel * sacher = distritoFederal->createPastel("Sacher");
+  Pastel * impos = distritoFederal->createPastel("Imposible");
+  Pastel * test = impos->clonar();
 
-  lista.add(tres);
 
   return 0;
 }

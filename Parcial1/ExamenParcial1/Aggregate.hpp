@@ -29,7 +29,7 @@ public:
   }
 
   T  getElementAtPos(int index){
-    return lista[index];
+    return list[index];
   }
 
   int getSize(){
